@@ -1,0 +1,48 @@
+<%- include('../layouts/header.ejs') %>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/form.css">
+    </head>
+
+    <body>
+        <%- include('../layouts/nav.ejs') %>
+            <main>
+
+                <div class="form">
+                    <h1>Add Product</h1>
+                    <form action="/admin/<% if(edit) { %>edit-product<% } else { %>add-product <% } %>"
+                        enctype="multipart/form-data" method="post">
+                        <div class="form-control">
+                            <label for="title">Title</label>
+                            <input type="text" value="<% if(edit){ %><%=product.title %><% }%>" class="input-control"
+                                name="title" id="title">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="image">Image</label>
+                            <input type="file" name="image" id="image">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="amount">Amount</label>
+                            <input type="number" value="<% if(edit){ %><%=product.amount %><% } %>" step="0.1"
+                                class="input-control" name="amount" id="amount">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="description">Description</label>
+                            <textarea class="input-control" name="description" id="description" cols="30"
+                                rows="10"><% if(edit){ %><%=product.description %><% }%></textarea>
+                        </div>
+                        <% if(edit) {%>
+                            <input type="hidden" name="productId" value="<%=product.id%>">
+                            <%} %>
+
+                                <button type="submit">
+                                    <% if(edit) { %>Update Product <% }else { %> Add Product <% } %>
+                                </button>
+                    </form>
+                </div>
+            </main>
+
+            <%- include('../layouts/footer.ejs') %>

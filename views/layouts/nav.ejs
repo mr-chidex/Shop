@@ -1,0 +1,41 @@
+<header>
+    <nav class="nav-left">
+        <div class="nav-brand"><a href="/" class="nav-link <%=path === '/' ? 'active' : '' %>">SHOP</a>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item"><a href="/products"
+                    class="nav-link <%= path === '/products' ? 'active' : '' %>">Products</a></li>
+            <li class="nav-item"><a href="/order" class="nav-link <%= path === '/order' ? 'active' : '' %>">Order</a>
+            </li>
+            <li class="nav-item"><a href="/cart" class="nav-link <%= path === '/cart' ? 'active' : '' %>">Cart</a></li>
+            <li class="nav-item"><a href="/admin/add-product"
+                    class="nav-link <%=path === '/admin/add-product' ? 'active' : '' %>">Add Product</a></li>
+            <li class="nav-item"><a href="/admin/admin-products"
+                    class="nav-link <%=path === '/admin/admin-products' ? 'active' : '' %>">Admin Products</a></li>
+        </ul>
+    </nav>
+
+    <nav class="nav-right">
+        <ul class="nav-items">
+            <li class="nav-item"><a href="/user/signin"
+                    class="nav-link <%= path === '/user/signin' ? 'active': ''%>">Sign In</a></li>
+            <li class="nav-item"><a href="/user/signup"
+                    class="nav-link  <%= path === '/user/signup' ? 'active': ''%>">Sign Up</a></li>
+            <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-nav">
+        <button><i class="fas fa-align-justify"></i></button>
+        <ul class="mobile-nav-items">
+            <li class="mobile-nav-item"><a href="/products" class="nav-link ">Products</a></li>
+            <li class="mobile-nav-item"><a href="/order" class="nav-link">Order</a></li>
+            <li class="mobile-nav-item"><a href="/cart" class="nav-link">Cart</a></li>
+            <li class="mobile-nav-item"><a href="/admin/add-product"
+                    class="nav-link <%=path === '/admin/add-product' ? 'active' : '' %>">Add Product</a></li>
+            <li class="mobile-nav-item"><a href="/admin/admin-products" class="nav-link">Admin Products</a></li>
+            <li class="mobile-nav-item"><a href="/login" class="nav-link">Login</a></li>
+            <li class="mobile-nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </div>
+</header>

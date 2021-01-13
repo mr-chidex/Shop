@@ -1,0 +1,33 @@
+<%- include('../layouts/header.ejs') %>
+</head>
+
+<body>
+    <%- include('../layouts/nav.ejs') %>
+    <main>
+        <% if(products.length > 0) { %>
+
+        <div class="card-wrapper">
+            <% products.forEach(product => { %>
+            <div class="card">
+                <div class="card-image">
+                    <img src="/<%=product.image%>" alt="<%=product.image%>">
+                </div>
+
+                <div class="card-details">
+                    <span class="card-title"><%=product.title %></span>
+                    <span class="price">$<%=product.amount%></span>
+                </div>
+
+                <div class="card-action">
+                    <%- include('../layouts/addTocart.ejs', {product: product}) %>
+                    <a class="details" href="/product/<%=product._id %>">Details</a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <% } else { %>
+        <h1>No Product Added</h1>
+        <% } %>
+    </main>
+
+    <%- include('../layouts/footer.ejs') %>

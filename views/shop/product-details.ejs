@@ -1,0 +1,27 @@
+<%- include('../layouts/header.ejs') %>
+<link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <%- include('../layouts/nav.ejs') %>
+    <main>
+
+        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        reprehenderit molestiae debitis soluta, mollitia doloribus ratione neque, aspernatur dignissimos
+        sequi enim corrupti ut error consequuntur? Esse eveniet facilis numquam quis. -->
+
+        <div class="product">
+            <h1><%=product.title%></h1>
+
+            <div class="product-image">
+                <img src="/<%=product.image %>" alt="">
+                <%- include('../layouts/addTocart.ejs', {product: product}) %>
+            </div>
+
+            <div class="product-content">
+                <h2>$<%=product.amount %></h2>
+                <p><%=product.description %></p>
+            </div>
+        </div>
+
+        <%- include('../layouts/footer.ejs') %>

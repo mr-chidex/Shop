@@ -1,0 +1,61 @@
+.form {
+  width: 100%;
+  margin: auto;
+  box-shadow: 2px 1px 14px rgba(0, 0, 0, 0.5), -4px -6px 8px rgba(0, 0, 0, 0.5);
+  padding: 1rem 1rem;
+  margin-top: 4rem;
+}
+@media (min-width: 411px) {
+  .form {
+    padding: 1rem 2.5rem;
+  }
+}
+@media (min-width: 621px) {
+  .form {
+    width: 500px;
+  }
+}
+.form h1 {
+  text-align: center;
+  margin: 1rem 0 1rem;
+  color: red;
+}
+.form form {
+  display: grid;
+  grid-row-gap: 1rem;
+}
+.form form .form-control label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.form form .form-control .input-control,
+.form form .form-control textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: solid 1px #111;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+}
+.form form .form-control [type=file] {
+  outline: none;
+  border: none;
+}
+.form form button {
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 0;
+  font-weight: 800;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: background-color 0.4s ease-in-out;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.form form button:hover {
+  background-color: red;
+  color: #fff;
+}
+
+/*# sourceMappingURL=form.css.map */
