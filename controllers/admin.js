@@ -1,8 +1,5 @@
 const Product = require("../model/product");
 const delteFile = require("../middleware/deleteImage");
-const path = require("path");
-const fs = require("fs");
-const product = require("./product");
 
 module.exports = {
     getAddProduct: (req, res, next) => {

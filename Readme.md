@@ -1,13 +1,8 @@
 # eCommerce Shop
 
-### Get Product
+```
+CRUD operations
+image upload
+```
 
-### Add Product
-
-### Edit Product
-
-### Delete Product
-
-# Dev Server
-
-**npm run dev-server **
+- Github: [@mr-chidex](https://github.com/mr-chidex)
